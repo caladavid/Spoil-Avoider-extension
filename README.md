@@ -24,6 +24,42 @@ Stay in control of your viewing experience and keep spoilers at bay with **Spoil
 - Real-Time Spoiler Blocking
 - User-Friendly Interface
 
+## Installation
+
+To get started with **Spoil Avoider**, follow these steps to install the extension from GitHub:
+
+1. Download the Repository
+Clone the repository to your local machine using Git:
+
+```
+gh repo clone caladavid/Spoil-Avoider-extension
+```
+Alternatively, you can download the repository as a ZIP file and extract it.
+
+2. Open Chrome Extensions Page <br/>
+Open Google Chrome. <br/>
+Navigate to chrome://extensions/ in your browser.
+
+4. Enable Developer Mode <br/>
+Toggle the Developer mode switch in the top right corner of the Extensions page.
+
+
+5. Load the Extension <br/>
+Click the Load unpacked button. <br/>
+Select the directory where you cloned or extracted the Spoil Avoider repository.
+
+
+6. Verify Installation <br/>
+You should now see **Spoil Avoider** listed among your installed extensions. Click the extension icon in the toolbar to open the popup and configure your keywords.
+
+7. Add Keywords <br/>
+Open the **Spoil Avoider** popup. <br/>
+Enter keywords in the input field and click Add Keyword to customize which spoilers you want to avoid. <br/>
+
+That’s it! You’re all set to enjoy a spoiler-free browsing experience.
+
+
+
 # Experiencing an Issue? ⚠️
 
 Did you stumble upon a bug or encounter an issue while using Astralea? Your feedback is invaluable to us! Please report any [bugs or technical glitches](https://github.com/caladavid/Spoil-Avoider-extension/issues)  you encounter so we can swiftly address them and enhance your browsing experience. 
