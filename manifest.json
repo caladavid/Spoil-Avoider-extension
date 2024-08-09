@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Spoil Avoider",
+    "author": "David Cala",
+    "version": "1.0.0",
+    "description": "Sick of series spoilers? Same here. This tool blurs out any spoilers for the shows you're into!",
+    "icons": {
+        "16": "16.png",
+        "32": "32.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "host_permissions": [
+        "https://www.youtube.com/*",
+        "*://*/*"
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "webNavigation",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": [
+                "common.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "NoMoreSpoilers"
+    }
+}

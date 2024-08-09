@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoilers - Options</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        width: 240px;
+        font-family: "Lato", sans-serif;
+        background-color: #23242c;
+    }
+
+    input {
+        width: 84.3%;
+        padding: 10px 1rem;
+        margin: 14px 0;
+        border-radius: 6px;
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        color: white;
+        margin: 8px 0px;
+        font-size: 14px;
+    }
+
+    li>button {
+        background-color: #d62828;
+        color: white;
+        padding: 4px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    li>button:hover {
+        background-color: #db5656;
+    }
+
+    #addKeyword {
+        width: 100%;
+        padding: 10px;
+        background-color: #538bf0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    #addKeyword:hover {
+        background-color: #3373e9
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+    h3 {
+        color: white;
+        font-weight: bold;
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    .alert {
+        color: white;
+        border-radius: 6px;
+    }
+
+    .alert > h5{
+        font-size: 14px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>Spoil Avoider</h1>
+        <div class="alert"></div>
+        <input type="text" id="keyword" placeholder="Enter keyword">
+        <button id="addKeyword">Add Keyword</button>
+        <h3>Keywords</h3>
+        <hr>
+        <ul id="keywordList"></ul>
+    </div>
+</body>
+<script src="popup.js"></script>
+
+</html>
