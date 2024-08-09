@@ -1,5 +1,11 @@
 ## Spoil Avoider
 
+Are you tired of having your favorite series or movies spoiled before you get a chance to watch them?  **Spoil Avoider** is here to help! This extension for Chrome ensures that you can enjoy your content without the frustration of unexpected spoilers.
+
+Stay in control of your viewing experience and keep spoilers at bay with **Spoil Avoider**. Explore content without the anxiety of encountering spoilers, and enjoy your shows and movies just as they were meant to be experienced!
+
+🌟 Dive into a spoiler-free experience and keep the excitement alive with **Spoil Avoider**!
+
 <p align="center">
   <a href="#"><img src="https://github.com/user-attachments/assets/1ff8372a-2acd-481a-a542-bbdf1996c081"/></a>
   <a href="#"><img src="https://github.com/user-attachments/assets/35f062d4-e71d-4750-a68d-1d36873a519f"/></a>
@@ -10,12 +16,6 @@
   <a href="#"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/></a>
   <a href="#"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
 </p>
-
-Are you tired of having your favorite series or movies spoiled before you get a chance to watch them?  **Spoil Avoider** is here to help! This extension for Chrome ensures that you can enjoy your content without the frustration of unexpected spoilers.
-
-Stay in control of your viewing experience and keep spoilers at bay with **Spoil Avoider**. Explore content without the anxiety of encountering spoilers, and enjoy your shows and movies just as they were meant to be experienced!
-
-🌟 Dive into a spoiler-free experience and keep the excitement alive with **Spoil Avoider**!
 
 
 ## Features 
