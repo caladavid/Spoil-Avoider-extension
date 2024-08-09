@@ -28,13 +28,8 @@ Stay in control of your viewing experience and keep spoilers at bay with **Spoil
 
 To get started with **Spoil Avoider**, follow these steps to install the extension from GitHub:
 
-1. Download the Repository
-Clone the repository to your local machine using Git:
-
-```
-gh repo clone caladavid/Spoil-Avoider-extension
-```
-Alternatively, you can download the repository as a ZIP file and extract it.
+1. Download the Repository  <br/>
+Download the repository as a ZIP file and extract it.
 
 2. Open Chrome Extensions Page <br/>
 Open Google Chrome. <br/>
