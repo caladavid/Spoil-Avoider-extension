@@ -1,20 +1,30 @@
 function checkForKeywords() {
-    const elements = document.querySelectorAll('ytd-compact-video-renderer');
+    const elements = [
+        ...document.querySelectorAll('.style-scope ytd-video-renderer'),
+        ...document.querySelectorAll('.style-scope ytd-reel-item-renderer'),
+        ...document.querySelectorAll('.style-scope ytd-grid-video-renderer'),
+        ...document.querySelectorAll('ytd-watch-card-compact-video-renderer'),
+    ];
 
     elements.forEach((element) => {
-        const titleElement = element.querySelector('#video-title');
-        const authorElement = element.querySelector('yt-formatted-string#text').title;
+        const titleElement = element.querySelector('#video-title') || element.querySelector('yt-formatted-string.title.style-scope.ytd-watch-card-compact-video-renderer');
+        const authorElement = element.querySelector('yt-formatted-string#text') || element.querySelector("yt-formatted-string.byline");
 
         if (titleElement) {
             const titleText = titleElement.textContent || '';
             const titleFormated = titleText.toLowerCase();
 
-            for (const regex of spoilerWordsFormated) {
-                if (regex.test(titleFormated)) {
-                    blockImgSpoiler(element, keywordMap.get(regex), 'watch', authorElement);
-                    break;
+            if (authorElement) {
+                const author = authorElement.title;
+
+                for (const regex of spoilerWordsFormated) {
+                    if (regex.test(titleFormated)) {
+                        blockImgSpoiler(element, keywordMap.get(regex), 'results', author, true);
+                        break;
+                    }
                 }
             }
+
         }
     });
 }
@@ -53,7 +63,7 @@ function handleNewNodes(nodes) {
 
 function isRelevantNode(node) {
     // Implementa tu lógica para identificar nodos relevantes
-    return node.matches('ytd-compact-video-renderer');
+    return node.matches('.style-scope ytd-video-renderer, .style-scope ytd-reel-item-renderer, .style-scope ytd-grid-video-renderer, ytd-watch-card-compact-video-renderer');
 }
 
 initContentScript();

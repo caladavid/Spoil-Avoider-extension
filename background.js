@@ -1,7 +1,3 @@
-/* chrome.runtime.onInstalled.addListener(function () {
-  chrome.storage.sync.set({ spoilerList: ["Batman", "Deadpool", "One Piece", "AI", "internet", "Porsche", "IA", "Shein"] });
-}); */
-
 // Listener for messages sent from other parts of the extension (e.g., popup or content scripts).
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'getSpoilerList') {
@@ -23,6 +19,8 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       scriptsToExecute.push('content-watch.js');
     } else if (/https:\/\/www.youtube.com\/shorts.*/.test(tab.url)) {
       scriptsToExecute.push('content-shorts.js');
+    } else if (/https:\/\/www.youtube.com\/results.*/.test(tab.url)) {
+      scriptsToExecute.push('content-results.js');
     } else {
       scriptsToExecute.push('content-general.js');
     }

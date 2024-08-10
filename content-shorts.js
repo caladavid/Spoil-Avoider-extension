@@ -9,7 +9,7 @@ function checkForKeywords() {
             const titleText = titleElement.textContent || '';
             const titleFormated = titleText.toLowerCase();
 
-            if(authorElement){
+            if (authorElement) {
                 const author = authorElement.title;
 
                 for (const regex of spoilerWordsFormated) {
@@ -25,32 +25,40 @@ function checkForKeywords() {
 }
 
 function initContentScript() {
-    // Create a debounced version of the checkForKeywords function to limit its execution
-    const debouncedCheckForKeywords = debounce(checkForKeywords, 300);
-
-    // Create a MutationObserver to monitor changes in the DOM
+    // Create a new MutationObserver instance to watch for changes in the DOM
     const observer = new MutationObserver((mutations) => {
-        let shouldRunCheck = false;
-
-        // Check if there are any added nodes in the mutations
+        // Iterate through all mutations that occurred
         for (const mutation of mutations) {
+            // Check if any new nodes were added
             if (mutation.addedNodes.length > 0) {
-                shouldRunCheck = true;
-                break;
+                // Handle the newly added nodes
+                handleNewNodes(mutation.addedNodes);
             }
-        }
-
-         // If there are added nodes, run the debounced checkForKeywords function
-        if (shouldRunCheck) {
-            debouncedCheckForKeywords();
         }
     });
 
-    // Start observing changes in the document body, including all descendant nodes
+    // Observe the body element for changes in its subtree and child elements
     observer.observe(document.body, { subtree: true, childList: true });
 
-    // Perform an initial check to cover elements already present
-    debouncedCheckForKeywords();
+    // Perform an initial check on the existing child nodes in the body
+    handleNewNodes(document.body.childNodes);
+}
+
+// Processes newly added nodes to the DOM
+function handleNewNodes(nodes) {
+    nodes.forEach(node => {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+            // Ensure that only relevant nodes are processed
+            if (isRelevantNode(node)) {
+                checkForKeywords(node);
+            }
+        }
+    });
+}
+
+function isRelevantNode(node) {
+    // Implementa tu lógica para identificar nodos relevantes
+    return node.matches('ytd-reel-video-renderer');
 }
 
 initContentScript();

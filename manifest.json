@@ -26,16 +26,12 @@
     },
     "content_scripts": [
         {
-            "matches": [
-                "https://www.youtube.com/*"
-            ],
-            "js": [
-                "common.js"
-            ]
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["common.js"]
         }
     ],
     "action": {
         "default_popup": "popup.html",
-        "default_title": "NoMoreSpoilers"
+        "default_title": "Spoil Avoider"
     }
 }

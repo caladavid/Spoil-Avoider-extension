@@ -14,17 +14,17 @@ chrome.storage.sync.get(['spoilerList'], function (result) {
     spoilerWordsFormated = spoilerWords.map(word => new RegExp(`\\b${word}\\b`, 'i'));
 
     keywordMap = new Map(spoilerWordsFormated.map((regex, index) => [regex, spoilerWords[index]]));
-    initContentScript();
 });
 
 function createSpoilerMessage(keyword, context, author) {
     const spoilerMessage = document.createElement("div");
     if (context === "watch") {
+        const authorHtml = author ? `<h1 class="author ${context}">${author}</h1>` : '';
         spoilerMessage.innerHTML = `
         <div class="spoiler-message watch">
             <p class="keyword watch">Detected keyword: ${keyword}</p>
             <button class="continue-btn watch">Click to see spoiler</button>
-            <h1 class="author watch">${author}</h1>
+            ${authorHtml} 
         </div>
     `;
     } else if (context === "short") {
@@ -32,7 +32,16 @@ function createSpoilerMessage(keyword, context, author) {
             <div class="spoiler-message">
                 <p class="keyword short">Detected keyword: ${keyword}</p>
                 <button class="continue-btn">Click to see spoiler</button>
-                <h1 class="author short">${author}</h1>
+                ${authorHtml} 
+            </div>
+    `;
+    } else if (context === "results") {
+        const authorHtml = author ? `<h1 class="author ${context}">${author}</h1>` : '';
+        spoilerMessage.innerHTML = `
+            <div class="spoiler-message">
+                <p class="keyword results">Detected keyword: ${keyword}</p>
+                <button class="continue-btn">Click to see spoiler</button>
+                ${authorHtml} 
             </div>
     `;
     } else {
@@ -40,7 +49,7 @@ function createSpoilerMessage(keyword, context, author) {
             <div class="spoiler-message">
                 <p class="keyword">Detected keyword: ${keyword}</p>
                 <button class="continue-btn">Click to see spoiler</button>
-                <h1 class="author">${author}</h1>
+                <h1 class="author">${author}</h1> 
             </div>
         `;
     }
@@ -138,10 +147,10 @@ function blockImgSpoiler(element, keyword, context, author, isShort = null) {
 }
 
 // Function to debounce another function, limiting how often it can be called.
-function debounce(func, wait) {
+/* function debounce(func, wait) {
     let timeout;
     return function (...args) {
         clearTimeout(timeout);
         timeout = setTimeout(() => func.apply(this, args), wait);
     };
-}
+} */
