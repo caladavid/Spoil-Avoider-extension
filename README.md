@@ -1,6 +1,6 @@
-## Spoil Avoider
+## Spoil Avoider (Youtube edition)
 
-Are you tired of having your favorite series or movies spoiled before you get a chance to watch them?  **Spoil Avoider** is here to help! This extension for Chrome ensures that you can enjoy your content without the frustration of unexpected spoilers.
+Are you tired of having your favorite series or movies spoiled before you get a chance to watch them?  **Spoil Avoider** is here to help! This Chrome extension is designed specifically for YouTube and ensures that you can enjoy your videos without the frustration of unexpected spoilers.
 
 Stay in control of your viewing experience and keep spoilers at bay with **Spoil Avoider**. Explore content without the anxiety of encountering spoilers, and enjoy your shows and movies just as they were meant to be experienced!
 
@@ -15,6 +15,7 @@ Stay in control of your viewing experience and keep spoilers at bay with **Spoil
   <a href="#"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/></a>
   <a href="#"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/></a>
   <a href="#"><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
 </p>
 
 
@@ -54,6 +55,9 @@ Enter keywords in the input field and click Add Keyword to customize which spoil
 That’s it! You’re all set to enjoy a spoiler-free browsing experience.
 
 
+## Limitations
+
+This extension is designed specifically for YouTube. It will not work on other websites or video platforms.
 
 # Experiencing an Issue? ⚠️
 
